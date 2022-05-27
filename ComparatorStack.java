@@ -17,10 +17,10 @@ class Stack<E> {
     // Task 1.2: pop() method
     // Your code here
 
-    // Task 1.3: findDuplicates() method
+    // Task 1.3: findElements() method
     // Your code here
 
-    // Task 1.4: removeDuplicates() method
+    // Task 1.4: removeElements() method
     // Your code here
 
 }
