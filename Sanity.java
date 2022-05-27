@@ -40,7 +40,7 @@ class ProvidedStackTests_Sanity {
 
         t.checkExpect(q.removeElements(3,3), true);
         t.checkExpect(q.removeElements(8,0), false);
-         t.checkException(new NoSuchElementException(), q, "removeElements", 9,1);
+        t.checkException(new NoSuchElementException(), q, "removeElements", 9,1);
         //t.checkExpect(q.removeElements(5,2), false);
     }
 
