@@ -22,26 +22,26 @@ class ProvidedStackTests_Sanity {
         t.checkExpect(q.pop(), 2);
     }
 
-    void testFindDuplicate(Tester t) {
+    void testFindElements(Tester t) {
         ArrayList<Integer> test_array = new ArrayList(Arrays.asList(1,3,3,8));
         Stack<Integer> q = new Stack(test_array, new IntCompare_Sanity());
         q.push(1);
 
-        t.checkExpect(q.findDuplicates(1),1);
-        t.checkExpect(q.findDuplicates(8), 0);
+        t.checkExpect(q.findElements(1),2);
+        t.checkExpect(q.findElements(9), 0);
     }
     
-    void testRemoveDuplicates(Tester t) {
+    void testRemoveElements(Tester t) {
         ArrayList<Integer> test_array = new ArrayList(Arrays.asList(1,3,3,8));
         Stack<Integer> q = new Stack(test_array, new IntCompare_Sanity());
         q.push(3);
         q.push(1);
         
 
-        t.checkExpect(q.removeDuplicates(3,3), true);
-        t.checkExpect(q.removeDuplicates(8,0), false);
-        t.checkException(new NoSuchElementException(), q, "removeElements", 9,1);
-        //t.checkExpect(q.removeDuplicates(5,2), false);
+        t.checkExpect(q.removeElements(3,3), true);
+        t.checkExpect(q.removeElements(8,0), false);
+         t.checkException(new NoSuchElementException(), q, "removeElements", 9,1);
+        //t.checkExpect(q.removeElements(5,2), false);
     }
 
 }
