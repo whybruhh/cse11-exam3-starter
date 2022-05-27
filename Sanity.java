@@ -37,13 +37,11 @@ class ProvidedStackTests_Sanity {
         q.push(3);
         q.push(1);
         
-        System.out.println(q.toString());
 
         t.checkExpect(q.removeDuplicates(3,3), true);
         t.checkExpect(q.removeDuplicates(8,0), false);
         t.checkException(new NoSuchElementException(), q, "removeElements", 9,1);
         //t.checkExpect(q.removeDuplicates(5,2), false);
-        System.out.println(q.toString());
     }
 
 }
