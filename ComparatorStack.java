@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.NoSuchElementException;
 
-// Task 1.0 Make Queue generic
+// Task 1.0 Make Stack generic
 // Edit the following class declaration
 
 class Stack<E> {
