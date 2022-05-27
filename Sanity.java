@@ -35,13 +35,13 @@ class ProvidedStackTests_Sanity {
         ArrayList<Integer> test_array = new ArrayList(Arrays.asList(1,3,3,8));
         Stack<Integer> q = new Stack(test_array, new IntCompare_Sanity());
         q.push(3);
-        q.push(3);
         q.push(1);
         
         System.out.println(q.toString());
 
         t.checkExpect(q.removeDuplicates(3,3), true);
-        t.checkExpect(q.removeDuplicates(8,0), true);
+        t.checkExpect(q.removeDuplicates(8,0), false);
+        t.checkException(new NoSuchElementException(), q, "removeElements", 9,1);
         //t.checkExpect(q.removeDuplicates(5,2), false);
         System.out.println(q.toString());
     }
